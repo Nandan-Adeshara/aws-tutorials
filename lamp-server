@@ -5,7 +5,7 @@
 sudo apt update && sudo apt upgrade -y
 
 //To install apache2 server
-sudo apt install apache2
+sudo apt install apache2 -y
 
 //Command to check status of apache2
 systemctl status apache2
@@ -17,7 +17,7 @@ sudo systemctl enable apache2
 curl http://localhost |OR| curl http://your_ip (if hosted on public ip addr)
 
 //To install MySQL
-sudo apt install mysql-server
+sudo apt install mysql-server -y
 
 //To check whether Mysql is running
 systemctl status mysql
@@ -27,6 +27,3 @@ sudo apt install -y php-fpm php-mysql php-curl php-xml php-mbstring php-imagick 
 
 //Check whether php is running
 systemctl status php7.4-fpm.service
-
-//Create a mysql user that will use wordpress DB
-sudo mysql
