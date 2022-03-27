@@ -1,0 +1,32 @@
+// All the commands displayed here are from a non-root user perspective. If you are a root user, don't use 'sudo' word in any command. 
+// To check whether you are root user- type the command 'id -u'. If it returns 0 then you are a root user. Otherwise not.
+
+//To update Ubuntu
+sudo apt update && sudo apt upgrade -y
+
+//To install apache2 server
+sudo apt install apache2
+
+//Command to check status of apache2
+systemctl status apache2
+
+//To automatically enable apache2 in the next bootup
+sudo systemctl enable apache2
+
+//To check whether the server is working
+curl http://localhost |OR| curl http://your_ip (if hosted on public ip addr)
+
+//To install MySQL
+sudo apt install mysql-server
+
+//To check whether Mysql is running
+systemctl status mysql
+
+// Install php as wordpress is written in PHP. Download additional modules
+sudo apt install -y php-fpm php-mysql php-curl php-xml php-mbstring php-imagick php-zip
+
+//Check whether php is running
+systemctl status php7.4-fpm.service
+
+//Create a mysql user that will use wordpress DB
+sudo mysql
